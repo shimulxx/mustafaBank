@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionActivity">
+    
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textFilterTransactionActivity"
+                android:layout_margin="10dp"
+                android:text="Filters:"
+                android:textStyle="bold"/>
+            
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/firstRelLayoutTransactionActivity"
+                android:layout_below="@id/textFilterTransactionActivity"
+                android:layout_centerHorizontal="true">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioGroupTypeTransactionActivity"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbAllTransactionActivity"
+                        android:layout_margin="5dp"
+                        android:checked="true"
+                        android:text="All"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbShoppingTransactionActivity"
+                        android:layout_margin="5dp"
+                        android:text="Shopping"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbInvestmentTransactionActivity"
+                        android:layout_margin="5dp"
+                        android:text="Investment"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbProfitTransactionActivity"
+                        android:layout_margin="5dp"
+                        android:text="Profit"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbLoanTransactionActivity"
+                        android:layout_margin="5dp"
+                        android:text="Loan"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbLoanPaymentTransactionActivity"
+                        android:layout_margin="5dp"
+                        android:text="Loan Payment"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbSendTransactionActivity"
+                        android:layout_margin="5dp"
+                        android:text="Send"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbReceiveTransactionActivity"
+                        android:layout_margin="5dp"
+                        android:text="Receive"/>
+
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/radioGroupTypeTransactionActivity">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textShowLessThenTransactionActivity"
+                        android:layout_marginTop="10dp"
+                        android:text="Show transactions greater than: "/>
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editTextMinTransactionActivity"
+                        android:layout_below="@+id/textShowLessThenTransactionActivity"
+                        android:layout_margin="10dp"
+                        android:inputType="numberDecimal"
+                        android:text="0.0"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editTextMinTransactionActivity"
+                        android:id="@+id/buttonSearchTransactionActivity"
+                        android:layout_margin="5dp"
+                        android:text="Search"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recViewRelLayoutTransactionActivity"
+                android:layout_below="@+id/firstRelLayoutTransactionActivity">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textTransactionTransactionActivity"
+                    android:text="Transactions:"
+                    android:textStyle="bold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textTransactionTransactionActivity"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/transactionRecViewTransactionActivity"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textNoTransactionTransactionActivity"
+                    android:layout_centerInParent="true"
+                    android:text="No Transaction to show"
+                    android:textStyle="italic"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+            
+        </RelativeLayout>
+        
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationViewTransactionActivity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_toolbar"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

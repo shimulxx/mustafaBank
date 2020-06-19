@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".AddLoanActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonAddLoanAddLoan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textWarningAddLoan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Add Loan" />
+
+            <RelativeLayout
+                android:id="@+id/initAmountRelLayoutAddLoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameRelativeLayoutAddLoan"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/editTextInitAmountAddLoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textInitAmountAddLoan"
+                    android:layout_marginTop="5dp"
+                    android:hint="Initial Amount"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/textInitAmountAddLoan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Initial amount"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/monthlyROIRelLayoutAddLoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/initAmountRelLayoutAddLoan"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/editTextMontlyROIAddLoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textMontlyROIAddLoan"
+                    android:layout_marginTop="5dp"
+                    android:hint="Monthly ROI"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/textMontlyROIAddLoan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monthly ROI"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/monthlyPaymentRelLayoutAddLoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/monthlyROIRelLayoutAddLoan"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/editTextMonthlyPaymentAddLoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textMonthlyPaymentAddLoan"
+                    android:layout_marginTop="5dp"
+                    android:hint="Monthly Payment"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/textMonthlyPaymentAddLoan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monthly Payment"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/initDateRelLayoutAddLoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/monthlyPaymentRelLayoutAddLoan"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/pickInitDateRelLayoutAddLoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textInitDateAddLoan"
+                    android:layout_marginTop="5dp">
+
+                    <Button
+                        android:id="@+id/buttonPickInitDateAddLoan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Pick Date" />
+
+                    <EditText
+                        android:id="@+id/editTextInitDateAddLoan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Initial Date" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textInitDateAddLoan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Initial Date"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/finishDateRelLayoutAddLoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/initDateRelLayoutAddLoan"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/pickFinishDateRelLayoutAddLoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textFinishDateAddLoan"
+                    android:layout_marginTop="5dp">
+
+                    <Button
+                        android:id="@+id/buttonPickFinishDateAddLoan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Pick Date" />
+
+                    <EditText
+                        android:id="@+id/editTextFinishDateAddLoan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/buttonPickFinishDateAddLoan"
+                        android:hint="Finish Date" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textFinishDateAddLoan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Finish Date"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nameRelativeLayoutAddLoan"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textAddLoanAddLoan"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/editTextNameAddLoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textNameAddLoan"
+                    android:layout_marginTop="5dp"
+                    android:hint="Loan name" />
+
+                <TextView
+                    android:id="@+id/textNameAddLoan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name: "
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textWarningAddLoan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/finishDateRelLayoutAddLoan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Warning"
+                android:textColor="@color/pink"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textAddLoanAddLoan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Add Loan"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
