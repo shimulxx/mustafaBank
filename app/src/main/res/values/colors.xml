@@ -13,4 +13,6 @@
     <color name="red">#F3392B</color>
     <color name="light_green">#C1FDC1</color>
     <color name="light_blue">#CCEAFF</color>
+    <color name="deep_red">#BFCA0505</color>
+    <color name="deep_green">#2A712C</color>
 </resources>

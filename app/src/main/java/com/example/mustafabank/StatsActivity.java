@@ -257,6 +257,12 @@ public class StatsActivity extends AppCompatActivity {
                 pieDataSet.setValueTextColor(Color.BLACK);
                 pieDataSet.setValueTextSize(12f);
                 //pieDataSet.setColors(Color.RED, Color.GREEN);
+                int val = getResources().getColor(R.color.deep_red);
+                long valINt = Color.RED;
+                long valINt2 = Color.GREEN;
+                //long colorW = Color.parseColor(val);
+                //pieDataSet.setColors(getResources().getColor(R.color.deep_red), getResources().getColor(R.color.deep_green));
+                pieDataSet.setColors(Color.RED, Color.GREEN);
                 pieDataSet.setSliceSpace(5f);
                 PieData pieData = new PieData(pieDataSet);
                 //pieChart.setDrawHoleEnabled(false);
